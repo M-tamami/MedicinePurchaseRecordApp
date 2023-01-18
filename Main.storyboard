@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="alm-Nk-1By">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bll-2f-GpL">
+            <objects>
+                <navigationController id="alm-Nk-1By" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Nm-Ej-fZm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WhY-LR-fMU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PW4-Pu-auk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1264" y="-35"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MedicinePurchaseRecordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="83y-tL-fQS">
+                                <rect key="frame" x="-7" y="487" width="400" height="365"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="365" id="RKO-Y2-Man"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Rmy-4z-t7S">
+                                        <rect key="frame" x="0.0" y="50" width="400" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rmy-4z-t7S" id="Gwd-L7-e1O">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このマークがある医薬品を購入したら、このアプリで記録しておきましょう" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xq-ZE-FKA">
+                                <rect key="frame" x="16" y="92" width="204" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Vzd-cb-fcV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36868776516480883" green="0.36251086872913191" blue="0.10943853428394294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" text="学ぶ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txz-9J-zsi">
+                                <rect key="frame" x="179.33333333333334" y="180" width="34.666666666666657" height="53.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医療費控除の一つであるセルフメディケーション税制について簡単に学びましょう" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xws-Pr-XH4">
+                                <rect key="frame" x="16" y="241.33333333333337" width="362" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="KT6-o3-qVG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36868776520000002" green="0.36251086869999999" blue="0.1094385343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0D5-Ag-hRd">
+                                <rect key="frame" x="0.0" y="288.33333333333331" width="393" height="60"/>
+                                <color key="backgroundColor" red="0.98946496212121215" green="0.94437151937852082" blue="0.5685519108669701" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FDx-sO-5Eo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="rLj-EK-3iE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="　セルフメディケーション税制について　　＞">
+                                    <color key="titleColor" red="0.36868776520000002" green="0.36251086869999999" blue="0.1094385343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="learnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dz0-9g-nMW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXc-N9-JGt">
+                                <rect key="frame" x="161.66666666666666" y="381.33333333333331" width="69.666666666666657" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録をする年を登録しましょう！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UY-9B-Z0Y">
+                                <rect key="frame" x="16" y="415.66666666666669" width="230" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="sWC-tf-edd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36868776520000002" green="0.36251086869999999" blue="0.1094385343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-6i-URf">
+                                <rect key="frame" x="262" y="449" width="108" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="＋新年度の登録">
+                                    <color key="titleColor" red="0.17550753091248433" green="0.38813795278315233" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewYearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3UO-YB-X7u"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MedicationMark" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-3i-eTZ">
+                                <rect key="frame" x="228" y="103" width="149" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="LTP-ls-f9s"/>
+                                    <constraint firstAttribute="width" constant="149" id="Wg0-uN-rog"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.98934560519172032" blue="0.88826748302848657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xws-Pr-XH4" secondAttribute="trailing" constant="15" id="07p-fS-uAx"/>
+                            <constraint firstItem="0D5-Ag-hRd" firstAttribute="top" secondItem="txz-9J-zsi" secondAttribute="bottom" constant="55" id="6aT-ZG-Cc2"/>
+                            <constraint firstItem="gkc-3i-eTZ" firstAttribute="top" secondItem="4xq-ZE-FKA" secondAttribute="top" constant="11" id="CXy-x0-buE"/>
+                            <constraint firstItem="83y-tL-fQS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-23" id="Isz-Za-LFV"/>
+                            <constraint firstItem="0D5-Ag-hRd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Iuh-FU-ElZ"/>
+                            <constraint firstItem="txz-9J-zsi" firstAttribute="top" secondItem="4xq-ZE-FKA" secondAttribute="bottom" constant="3" id="JsR-zm-c3D"/>
+                            <constraint firstItem="0D5-Ag-hRd" firstAttribute="centerX" secondItem="txz-9J-zsi" secondAttribute="centerX" id="NYk-qO-Qjq"/>
+                            <constraint firstItem="0D5-Ag-hRd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RIO-7i-wcS"/>
+                            <constraint firstItem="83y-tL-fQS" firstAttribute="trailing" secondItem="0D5-Ag-hRd" secondAttribute="trailing" id="SCd-2e-Uap"/>
+                            <constraint firstAttribute="bottom" secondItem="83y-tL-fQS" secondAttribute="bottom" id="Tm0-BC-lmP"/>
+                            <constraint firstItem="83y-tL-fQS" firstAttribute="top" secondItem="AjZ-6i-URf" secondAttribute="bottom" constant="8" id="XdJ-1t-e73"/>
+                            <constraint firstItem="4xq-ZE-FKA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XgV-Q8-YWC"/>
+                            <constraint firstItem="4UY-9B-Z0Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xws-Pr-XH4" secondAttribute="leading" id="alm-wd-JSZ"/>
+                            <constraint firstItem="0D5-Ag-hRd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="asD-7W-rug"/>
+                            <constraint firstItem="AjZ-6i-URf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="diI-gS-SC9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AjZ-6i-URf" secondAttribute="trailing" constant="23" id="hBM-Cx-Bfg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4xq-ZE-FKA" secondAttribute="trailing" constant="173" id="iDn-Fj-jjx"/>
+                            <constraint firstItem="Xws-Pr-XH4" firstAttribute="top" secondItem="txz-9J-zsi" secondAttribute="bottom" constant="8" symbolic="YES" id="jom-GA-DqM"/>
+                            <constraint firstItem="4UY-9B-Z0Y" firstAttribute="top" secondItem="yXc-N9-JGt" secondAttribute="bottom" constant="14" id="kaL-Cm-zmP"/>
+                            <constraint firstItem="gkc-3i-eTZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="keR-Yc-g6Y"/>
+                            <constraint firstItem="4UY-9B-Z0Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lVJ-Dl-YXA"/>
+                            <constraint firstItem="Xws-Pr-XH4" firstAttribute="leading" secondItem="4xq-ZE-FKA" secondAttribute="leading" id="q80-iP-jUM"/>
+                            <constraint firstItem="yXc-N9-JGt" firstAttribute="centerX" secondItem="txz-9J-zsi" secondAttribute="centerX" id="sOd-q6-nHS"/>
+                            <constraint firstItem="gkc-3i-eTZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="v8H-1R-qfv"/>
+                            <constraint firstItem="yXc-N9-JGt" firstAttribute="top" secondItem="0D5-Ag-hRd" secondAttribute="bottom" constant="33" id="wbl-w8-WLm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4UY-9B-Z0Y" secondAttribute="trailing" constant="147" id="zx3-tT-Ci8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="D7g-YF-MUK"/>
+                    <connections>
+                        <outlet property="addNewYearButton" destination="AjZ-6i-URf" id="c9D-hV-wAy"/>
+                        <outlet property="homeTableView" destination="83y-tL-fQS" id="Qic-L8-FYe"/>
+                        <outlet property="learnButton" destination="0D5-Ag-hRd" id="dCq-9q-lLG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248.09160305343511" y="-35.211267605633807"/>
+        </scene>
+        <!--Year Register View Controller-->
+        <scene sceneID="x2M-Oo-lzj">
+            <objects>
+                <viewController storyboardIdentifier="YearRegisterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7eA-1k-zGS" customClass="YearRegisterViewController" customModule="MedicinePurchaseRecordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSx-TI-Op2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-K8-STY">
+                                <rect key="frame" x="107" y="202" width="187" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="jXw-xu-28x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新年度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhp-4y-1EY">
+                                <rect key="frame" x="107" y="173" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOU-bP-Rkc">
+                                <rect key="frame" x="287.33333333333331" y="262" width="47.666666666666686" height="34.333333333333314"/>
+                                <color key="backgroundColor" red="0.86772550047364783" green="0.93585435644764203" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.17550753089999999" green="0.38813795280000002" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="OK"/>
+                                <connections>
+                                    <action selector="addYearButton:" destination="7eA-1k-zGS" eventType="touchUpInside" id="TQK-lO-fnU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SVm-FO-bBN"/>
+                        <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="wfE-K8-STY" firstAttribute="leading" secondItem="lhp-4y-1EY" secondAttribute="leading" id="GeJ-3L-0af"/>
+                            <constraint firstItem="wfE-K8-STY" firstAttribute="top" secondItem="lhp-4y-1EY" secondAttribute="bottom" constant="8" id="N1P-gI-Uvt"/>
+                            <constraint firstItem="lhp-4y-1EY" firstAttribute="top" secondItem="SVm-FO-bBN" secondAttribute="top" constant="114" id="NHw-la-WCf"/>
+                            <constraint firstItem="rOU-bP-Rkc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SVm-FO-bBN" secondAttribute="leading" symbolic="YES" id="jGq-cT-JSN"/>
+                            <constraint firstItem="SVm-FO-bBN" firstAttribute="trailing" secondItem="lhp-4y-1EY" secondAttribute="trailing" constant="175" id="jmX-St-EPS"/>
+                            <constraint firstItem="rOU-bP-Rkc" firstAttribute="top" secondItem="wfE-K8-STY" secondAttribute="bottom" constant="26" id="oqC-OB-GgB"/>
+                            <constraint firstItem="lhp-4y-1EY" firstAttribute="leading" secondItem="SVm-FO-bBN" secondAttribute="leading" constant="107" id="pNe-cP-u6S"/>
+                            <constraint firstItem="SVm-FO-bBN" firstAttribute="trailing" secondItem="rOU-bP-Rkc" secondAttribute="trailing" constant="58" id="yu4-UV-r9Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addYearButton" destination="rOU-bP-Rkc" id="TaH-9C-J13"/>
+                        <outlet property="addYearTextField" destination="wfE-K8-STY" id="gCM-ob-xgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvp-U9-LaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248.09160305343511" y="624.64788732394368"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="L6T-CN-IyM">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tna-Fb-hRA" customClass="DetailViewController" customModule="MedicinePurchaseRecordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eR-HQ-4sS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支払った金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRS-Kc-67c">
+                                <rect key="frame" x="46.333333333333343" y="119" width="92" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="FEU-Jf-yen"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36868776520000002" green="0.36251086869999999" blue="0.1094385343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Um-2r-eif">
+                                <rect key="frame" x="71.666666666666671" y="137" width="41" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Mqs-Qu-siH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.36868776520000002" green="0.36251086869999999" blue="0.1094385343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tv-Zi-cac">
+                                <rect key="frame" x="157" y="108" width="167" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ils-LK-fZl">
+                                <rect key="frame" x="332" y="137" width="16" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="wva-qh-KS3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36868776520000002" green="0.36251086869999999" blue="0.1094385343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入の記録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOv-ih-ynY">
+                                <rect key="frame" x="153" y="236.33333333333334" width="87" height="21.000000000000028"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="rti-31-TM2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入ごとに登録していきましょう！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnX-zC-rc3">
+                                <rect key="frame" x="74" y="271.33333333333331" width="245" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="RPv-Nf-6bF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36868776520000002" green="0.36251086869999999" blue="0.1094385343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CI9-1W-iXA">
+                                <rect key="frame" x="0.0" y="362.33333333333326" width="393" height="489.66666666666674"/>
+                                <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Yfd-pu-VWa">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yfd-pu-VWa" id="XAr-xQ-71n">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcl-bq-HOq">
+                                <rect key="frame" x="287" y="324" width="77" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="＋新規作成">
+                                    <color key="titleColor" red="0.17550753089999999" green="0.38813795280000002" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewYearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OsS-BM-ijX"/>
+                                    <action selector="byStoreDetailButton:" destination="Tna-Fb-hRA" eventType="touchUpInside" id="aL0-6e-AxY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cRl-y5-DBs"/>
+                        <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LRS-Kc-67c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cRl-y5-DBs" secondAttribute="leading" id="1cY-hB-iA3"/>
+                            <constraint firstItem="CI9-1W-iXA" firstAttribute="top" secondItem="Jcl-bq-HOq" secondAttribute="bottom" constant="8.3333333333332575" id="3DE-1d-rxX"/>
+                            <constraint firstItem="CI9-1W-iXA" firstAttribute="centerX" secondItem="wnX-zC-rc3" secondAttribute="centerX" id="4Ib-qh-cIG"/>
+                            <constraint firstItem="cRl-y5-DBs" firstAttribute="trailing" secondItem="ils-LK-fZl" secondAttribute="trailing" constant="45" id="5Go-sy-70T"/>
+                            <constraint firstItem="2Um-2r-eif" firstAttribute="leading" secondItem="cRl-y5-DBs" secondAttribute="leading" constant="71.666666666666671" id="DgS-gO-EdY"/>
+                            <constraint firstItem="2Um-2r-eif" firstAttribute="centerX" secondItem="LRS-Kc-67c" secondAttribute="centerX" id="FcP-QD-L4F"/>
+                            <constraint firstItem="ils-LK-fZl" firstAttribute="leading" secondItem="1Tv-Zi-cac" secondAttribute="trailing" constant="8" symbolic="YES" id="HwN-Jh-2Ji"/>
+                            <constraint firstItem="cRl-y5-DBs" firstAttribute="trailing" secondItem="Jcl-bq-HOq" secondAttribute="trailing" constant="29" id="RM1-HE-WmD"/>
+                            <constraint firstItem="Jcl-bq-HOq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cRl-y5-DBs" secondAttribute="leading" symbolic="YES" id="THx-Sg-54S"/>
+                            <constraint firstItem="2Um-2r-eif" firstAttribute="top" secondItem="LRS-Kc-67c" secondAttribute="bottom" id="XuU-my-YLU"/>
+                            <constraint firstItem="LRS-Kc-67c" firstAttribute="top" secondItem="cRl-y5-DBs" secondAttribute="top" constant="60" id="Zmi-Bx-aIt"/>
+                            <constraint firstItem="ils-LK-fZl" firstAttribute="top" secondItem="cRl-y5-DBs" secondAttribute="top" constant="78" id="Zup-21-bsc"/>
+                            <constraint firstItem="1Tv-Zi-cac" firstAttribute="leading" secondItem="LRS-Kc-67c" secondAttribute="trailing" constant="18.666666666666686" id="bqL-lE-F2j"/>
+                            <constraint firstItem="wnX-zC-rc3" firstAttribute="top" secondItem="EOv-ih-ynY" secondAttribute="bottom" constant="14" id="c6I-9K-RLu"/>
+                            <constraint firstItem="wnX-zC-rc3" firstAttribute="centerX" secondItem="EOv-ih-ynY" secondAttribute="centerX" id="fqc-Yt-LAG"/>
+                            <constraint firstAttribute="bottom" secondItem="CI9-1W-iXA" secondAttribute="bottom" id="lIJ-tB-omY"/>
+                            <constraint firstItem="CI9-1W-iXA" firstAttribute="leading" secondItem="1eR-HQ-4sS" secondAttribute="leading" id="mgS-oy-FTe"/>
+                            <constraint firstItem="Jcl-bq-HOq" firstAttribute="top" secondItem="wnX-zC-rc3" secondAttribute="bottom" constant="34.666666666666686" id="ngV-bk-oqP"/>
+                            <constraint firstItem="EOv-ih-ynY" firstAttribute="top" secondItem="1Tv-Zi-cac" secondAttribute="bottom" constant="60.333333333333371" id="oF3-Xu-vHa"/>
+                            <constraint firstItem="1Tv-Zi-cac" firstAttribute="bottom" secondItem="2Um-2r-eif" secondAttribute="bottom" id="vqZ-GZ-6jC"/>
+                            <constraint firstItem="EOv-ih-ynY" firstAttribute="centerX" secondItem="1eR-HQ-4sS" secondAttribute="centerX" id="wL6-gO-ojj"/>
+                            <constraint firstItem="1Tv-Zi-cac" firstAttribute="top" secondItem="LRS-Kc-67c" secondAttribute="top" constant="-11" id="zSn-T2-VUi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="byStoreDetailButton" destination="Jcl-bq-HOq" id="UTu-hJ-Sda"/>
+                        <outlet property="byStoreDetailTableView" destination="CI9-1W-iXA" id="fZc-Wo-BqS"/>
+                        <outlet property="yearTotalLabel" destination="1Tv-Zi-cac" id="LV6-Cc-xMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SH-lg-A3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519.84732824427476" y="-35.211267605633807"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="N9m-ud-WVU">
+            <objects>
+                <viewController storyboardIdentifier="RecordVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZOy-np-Tiw" customClass="RecordViewController" customModule="MedicinePurchaseRecordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pFx-Og-a6L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJk-1W-KVg">
+                                <rect key="frame" x="16" y="141" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2)医薬品の名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-Sv-Xqg">
+                                <rect key="frame" x="16" y="266" width="112" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="fgU-Ij-mCk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(3)支払った金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K76-fu-ELr">
+                                <rect key="frame" x="250" y="266" width="112" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="3Xu-xn-Acb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1)薬局・ドラッグストアなどの支払先の名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f7-Tb-nQV">
+                                <rect key="frame" x="17" y="115" width="309" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="squ-pd-xh8">
+                                <rect key="frame" x="142.66666666666666" y="209" width="108" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H1y-e7-xpe"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="＋医薬品を追加">
+                                    <color key="titleColor" red="0.17550753089999999" green="0.38813795280000002" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewYearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AXb-AL-7Zr"/>
+                                    <action selector="byStoreDetailButton:" destination="Tna-Fb-hRA" eventType="touchUpInside" id="itx-d7-b3d"/>
+                                    <action selector="medicineAddButton:" destination="ZOy-np-Tiw" eventType="touchUpInside" id="GGa-dv-fty"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(単位 : 円)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12s-kU-8oa">
+                                <rect key="frame" x="333" y="285" width="44" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="11" id="aLy-Ih-Rgd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-xM-bkK">
+                                <rect key="frame" x="0.0" y="304" width="393" height="548"/>
+                                <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="kL4-GH-f8X">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kL4-GH-f8X" id="OeM-zi-y3Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Fxx-ek-WdB">
+                                <rect key="frame" x="27" y="746" width="336" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="削除">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recordDeleteButton:" destination="ZOy-np-Tiw" eventType="touchUpInside" id="oKJ-YE-5qK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Blv-hu-fEZ">
+                                <rect key="frame" x="26" y="699" width="337" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.75164175529160138" green="0.87934027780909096" blue="0.69918212704577531" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存">
+                                    <color key="baseForegroundColor" red="0.36145131349999998" green="0.47942313759999999" blue="0.31532275770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recordAddButton:" destination="ZOy-np-Tiw" eventType="touchUpInside" id="Ir6-VX-kDo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JEw-Yz-0yw"/>
+                        <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="squ-pd-xh8" firstAttribute="top" secondItem="HJk-1W-KVg" secondAttribute="bottom" constant="34" id="ELZ-7F-ekv"/>
+                            <constraint firstItem="12s-kU-8oa" firstAttribute="top" secondItem="K76-fu-ELr" secondAttribute="bottom" constant="1" id="Fel-hK-NZR"/>
+                            <constraint firstItem="JEw-Yz-0yw" firstAttribute="trailing" secondItem="K76-fu-ELr" secondAttribute="trailing" constant="31" id="Gbq-ks-4Lr"/>
+                            <constraint firstItem="lcf-Sv-Xqg" firstAttribute="leading" secondItem="JEw-Yz-0yw" secondAttribute="leading" constant="16" id="Hak-I0-6Gh"/>
+                            <constraint firstItem="K76-fu-ELr" firstAttribute="baseline" secondItem="lcf-Sv-Xqg" secondAttribute="baseline" id="LOb-hP-DOl"/>
+                            <constraint firstItem="K76-fu-ELr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lcf-Sv-Xqg" secondAttribute="trailing" constant="8" symbolic="YES" id="QWt-uP-mLS"/>
+                            <constraint firstItem="C7q-xM-bkK" firstAttribute="leading" secondItem="JEw-Yz-0yw" secondAttribute="leading" id="RAQ-LQ-ZaM"/>
+                            <constraint firstItem="lcf-Sv-Xqg" firstAttribute="top" secondItem="HJk-1W-KVg" secondAttribute="bottom" constant="91" id="T7p-m9-gne"/>
+                            <constraint firstItem="HJk-1W-KVg" firstAttribute="leading" secondItem="JEw-Yz-0yw" secondAttribute="leading" constant="16" id="TfP-El-iwn"/>
+                            <constraint firstItem="JEw-Yz-0yw" firstAttribute="trailing" secondItem="HJk-1W-KVg" secondAttribute="trailing" constant="16" id="UtV-TQ-DMq"/>
+                            <constraint firstItem="lcf-Sv-Xqg" firstAttribute="leading" secondItem="7f7-Tb-nQV" secondAttribute="leading" constant="-1" id="WQi-bb-jTo"/>
+                            <constraint firstItem="C7q-xM-bkK" firstAttribute="top" secondItem="12s-kU-8oa" secondAttribute="bottom" constant="8" symbolic="YES" id="XEN-08-oGC"/>
+                            <constraint firstItem="7f7-Tb-nQV" firstAttribute="top" secondItem="JEw-Yz-0yw" secondAttribute="top" constant="56" id="dUd-Iv-CJC"/>
+                            <constraint firstItem="12s-kU-8oa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JEw-Yz-0yw" secondAttribute="leading" symbolic="YES" id="ioj-Om-svA"/>
+                            <constraint firstItem="C7q-xM-bkK" firstAttribute="trailing" secondItem="JEw-Yz-0yw" secondAttribute="trailing" id="m0e-fv-WKD"/>
+                            <constraint firstItem="JEw-Yz-0yw" firstAttribute="trailing" secondItem="12s-kU-8oa" secondAttribute="trailing" constant="16" id="rfi-MB-nOY"/>
+                            <constraint firstItem="JEw-Yz-0yw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7f7-Tb-nQV" secondAttribute="trailing" symbolic="YES" id="sYd-mj-gGE"/>
+                            <constraint firstItem="squ-pd-xh8" firstAttribute="centerX" secondItem="pFx-Og-a6L" secondAttribute="centerX" id="xSc-BF-5Oi"/>
+                            <constraint firstAttribute="bottom" secondItem="C7q-xM-bkK" secondAttribute="bottom" id="yMT-Wx-Ewf"/>
+                            <constraint firstItem="HJk-1W-KVg" firstAttribute="top" secondItem="7f7-Tb-nQV" secondAttribute="bottom" constant="8" symbolic="YES" id="zNK-GO-0vh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="medicineAddButton" destination="squ-pd-xh8" id="Dog-U4-D52"/>
+                        <outlet property="medicineNameTableView" destination="C7q-xM-bkK" id="dQc-mj-L6q"/>
+                        <outlet property="recordAddButton" destination="Blv-hu-fEZ" id="jgU-uJ-6Px"/>
+                        <outlet property="recordDeleteButton" destination="Fxx-ek-WdB" id="Gjf-Ox-r53"/>
+                        <outlet property="storeNameField" destination="HJk-1W-KVg" id="tkZ-U9-7Iv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSZ-nb-lRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185.4961832061069" y="-35.211267605633807"/>
+        </scene>
+        <!--Learn View Controller-->
+        <scene sceneID="2rL-D3-Rnj">
+            <objects>
+                <viewController storyboardIdentifier="LearnVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iI6-dD-gGJ" customClass="LearnViewController" customModule="MedicinePurchaseRecordApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="88X-aj-Lef">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="セルフメディケーション税制とは?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w4-SV-Vjg">
+                                <rect key="frame" x="16" y="119" width="361" height="48"/>
+                                <color key="backgroundColor" red="0.94298267364501953" green="0.90985161066055298" blue="0.76378899812698364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="361" id="nlA-a9-sj0"/>
+                                    <constraint firstAttribute="height" constant="48" id="rOT-WC-YSo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="(*1): OTC医薬品とは、医療用として用いられていたものが転用されたもの。例えば「ロキソニン」。もともとは医療機関だけで使用されていたが、2010年に「スイッチOTC医薬品」として承認され市販され始めた。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yr8-hB-Lup">
+                                <rect key="frame" x="16" y="300" width="361" height="73"/>
+                                <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="KVP-qh-g5a"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvj-IA-j6A">
+                                <rect key="frame" x="16" y="174" width="361" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1Fs-JK-aOK"/>
+                                </constraints>
+                                <string key="text">「医療費控除制度」の一つですが、「通常の医療費控除」か「セルフメディケーション税制」のどちらかしか受けられません。セルフメディケーション税制は、医療機関の薬局やドラッグストアなどで「スイッチOTC医薬品」(*1)などを購入した場合に、その購入費用のうち１万2,000円を超えた額について「所得控除」を受けられるというものです。                    </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WfD-iW-vMv"/>
+                        <color key="backgroundColor" red="1" green="0.98823523520000001" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hvj-IA-j6A" firstAttribute="trailing" secondItem="2w4-SV-Vjg" secondAttribute="trailing" id="3tx-DF-Jbk"/>
+                            <constraint firstItem="WfD-iW-vMv" firstAttribute="bottom" secondItem="Yr8-hB-Lup" secondAttribute="bottom" constant="445" id="Kkc-dQ-xdS"/>
+                            <constraint firstItem="WfD-iW-vMv" firstAttribute="bottom" secondItem="Hvj-IA-j6A" secondAttribute="bottom" constant="516" id="PZC-X0-mBx"/>
+                            <constraint firstItem="Hvj-IA-j6A" firstAttribute="leading" secondItem="2w4-SV-Vjg" secondAttribute="leading" id="R6g-7C-3i5"/>
+                            <constraint firstItem="Hvj-IA-j6A" firstAttribute="trailing" secondItem="Yr8-hB-Lup" secondAttribute="trailing" id="Tmw-rj-Ofb"/>
+                            <constraint firstItem="Hvj-IA-j6A" firstAttribute="leading" secondItem="Yr8-hB-Lup" secondAttribute="leading" id="VYq-7T-ZiB"/>
+                            <constraint firstItem="Hvj-IA-j6A" firstAttribute="leading" secondItem="88X-aj-Lef" secondAttribute="leadingMargin" id="hoy-kM-H0Y"/>
+                            <constraint firstItem="Hvj-IA-j6A" firstAttribute="top" secondItem="2w4-SV-Vjg" secondAttribute="bottom" constant="7" id="xWy-VC-qzc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16l-uN-n9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160" y="-680"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MedicationMark" width="472.5" height="206.5"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
